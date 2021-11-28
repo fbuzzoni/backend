@@ -1,0 +1,72 @@
+<div class="banda">
+    <div class="ancho">
+        <div class="logo">
+            <p><a href="/">Federico Buzzoni</a></p>
+        </div>
+        <nav>
+            <ul>
+                <li style="color: whitesmoke;"><a>Módulo administración</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<div class="ingreso">
+    <h1>Backend</h1>
+    <div class="novedadesgrid">
+        <div class="novedadescont">
+            <p style="text-align: right;"> Hola <b>{{usuario}}</b>! <a href="/admin/login/logout"
+                    class="btn btn-sm btn-danger">Cerrar
+                    Sesión<i class="fa fa-sign-out"></i></a></p>
+            <h3>Listado de novedades</h3>
+            <div class="row">
+                <div class="col">
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Título</th>
+                                <th scope="col">Imagen</th>
+                                <th scope="col" class="text-center">Acciones</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            {{#each novedades}}
+                            <tr>
+                                <th scope="row">{{id}}</th>
+                                <td>{{titulo}}</td>
+                                <td>{{{imagen}}}</td>
+                                <td class="text-center">
+                                    <a href="/admin/novedades/modificar/{{id}}" title="Editar" class="btn btn-sm btn-secondary">
+                                        <img src="/images/pencil.svg" alt="editar" width="25px"/>
+                                    </a>
+                                    <a href="/admin/novedades/eliminar/{{id}}" title="Eliminar" class="btn btn-sm btn-secondary">
+                                           <img src="/images/trash.svg" alt="editar" width="25px"/>
+                                    </a>
+                                </td>
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                    <div class="col-2 text-right">
+                        <a href="/admin/novedades/agregar" class="btn btn-success">
+                            <i class="fa fa-plus"></i>Nuevo
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <div class="bandafooter">
+        <div class="anchofooter">
+            <p>Desarrollado por Federico Buzzoni. 2021</p>
+        </div>
+    </div>
+</footer>

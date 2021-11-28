@@ -1,0 +1,50 @@
+<div class="banda">
+    <div class="ancho">
+        <div class="logo">
+            <p><a href="/">Federico Buzzoni</a></p>
+        </div>
+        <nav>
+            <ul>
+                <li style="color: whitesmoke;"><a>Módulo administración</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<div class="ingreso">
+    <h1>Backend</h1>
+    <div class="novedadesgrid">
+        <div class="novedadescont">
+            <h3>Agregar una nueva novedad</h3>
+            <form action="/admin/novedades/agregar" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Título" name="titulo">
+            </div>
+            <div class="form-group">
+                <textarea type="text" class="form-control" placeholder="Subtítulo" name="subtitulo"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <textarea type="text" class="form-control" placeholder="Cuerpo" name="cuerpo"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Imagen: <input type="file" name="imagen" id="imagen" /></label>
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{{#if error}}
+<h5>{{message}}</h5>
+{{/if}}
+
+<footer>
+    <div class="bandafooter">
+        <div class="anchofooter">
+            <p>Desarrollado por Federico Buzzoni. 2021</p>
+        </div>
+    </div>
+</footer>
+
